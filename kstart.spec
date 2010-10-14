@@ -31,17 +31,20 @@ PATH="/sbin:/bin:/usr/sbin:/usr/bin:$PATH" CC=cc \
 
 %install
 %{__rm} -rf %{buildroot}
-%makeinstall DESTDIR=%{buildroot}
+%{__make} install DESTDIR=%{buildroot}
+ 
 
 %clean
 %{__rm} -rf %{buildroot}
 
+
 %files
 %defattr(-, root, root, 0755)
-%{_bindir}/*
-%defattr(-, root, root, 0644)
+%{_prefix}/*
+
+#%defattr(-, root, root, 0644)
 %doc LICENSE NEWS README TODO
-%{_prefix}/share/man/*/*
+
 
 %changelog
 * Wed Oct 13 2010 Andy Cobaugh <phalenor@bx.psu.edu> 3.16
