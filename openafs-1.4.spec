@@ -9,8 +9,7 @@ BuildRoot: %{_tmppath}/%{name}-%{version}-root
 Summary: OpenAFS
 URL: http://www.openafs.org
 Source: %{name}-%{version}-src.tar.gz
-
-%define SUNW_Pkg %{vendor_tag}%{name}
+SUNW_Pkg: %{vendor_tag}%{name}
 
 %description
 OpenAFS
