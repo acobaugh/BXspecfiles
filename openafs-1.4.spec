@@ -90,7 +90,7 @@ rm -rf %{buildroot}
 
 /var/opt/bx/openafs
 /etc/opt/bx/openafs/server
-%config(noreplace) /etc/opt/bx/openafs/openafs.conf
+%config(noreplace) /etc/opt/bx/openafs/openafs.conf.example
 
 %post
 /usr/sbin/svccfg import /var/svc/manifest/site/openafs-client.xml
